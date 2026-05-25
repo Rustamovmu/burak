@@ -13,7 +13,7 @@
   "author": "MIT",
   "license": "ISC",
   "dependencies": {
-    "moment": "^2.30.1"
+    "moment": "^2.29.4"
   },
   "devDependencies": {
     "nodemon": "^3.0.2",
