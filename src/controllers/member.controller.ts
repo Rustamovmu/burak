@@ -1,35 +1,37 @@
 import { Request, Response } from "express";
 import { T } from "../libs/types/common";
 
+// REACT
+
 const memberController: T = {};
-memberController.goHome = (req: Request, res: Response) => {
-    try {
-        res.send("Home Page");
+// memberController.goHome = (req: Request, res: Response) => {
+//     try {
+//         res.send("Home Page");
 
-    } catch (err) {
-        console.log("Error, goHome:", err);
-    }
+//     } catch (err) {
+//         console.log("Error, goHome:", err);
+//     }
 
-};
+// };
 
-memberController.getLogin = (req: Request, res: Response) => {
-    try {
-        res.send("Login Page");
+// memberController.getLogin = (req: Request, res: Response) => {
+//     try {
+//         res.send("Login Page");
 
-    } catch (err) {
-        console.log("Error, getLogin:", err);
-    }
+//     } catch (err) {
+//         console.log("Error, getLogin:", err);
+//     }
 
-};
+// };
 
-memberController.getSignup = (req: Request, res: Response) => {
-    try {
-        res.send("Signup Page");
+// memberController.getSignup = (req: Request, res: Response) => {
+//     try {
+//         res.send("Signup Page");
 
-    } catch (err) {
-        console.log("Error, getSignup:", err);
-    }
+//     } catch (err) {
+//         console.log("Error, getSignup:", err);
+//     }
 
-};
+// };
 
 export default memberController;
