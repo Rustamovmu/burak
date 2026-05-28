@@ -4,18 +4,18 @@
 # uning kvadratidan tashkil topgan object hosil qilib qaytarsin.
 
 # Masalan: getSquareNumbers([1, 2, 3]) return [{number: 1, square: 1}, ...]
-def getSquareNumbers(arr):
-    result = []
-    for num in arr:
-        obj = {
-            "number": num,
-            "square": num ** 2
-        }
-    result.append(obj)
-    return result
+# def getSquareNumbers(arr):
+#     result = []
+#     for num in arr:
+#         obj = {
+#             "number": num,
+#             "square": num ** 2
+#         }
+#     result.append(obj)
+#     return result
 
 
-print(getSquareNumbers([1, 2, 3]))
+# print(getSquareNumbers([1, 2, 3]))
 
 # TASK L
 
