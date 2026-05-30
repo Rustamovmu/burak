@@ -1,3 +1,17 @@
+# TASK N
+
+# Stringni palindrom ekanligini aniqlab true yoki false qaytarsin.
+
+# Masalan: palindromCheck("dad") return true
+def palindromCheck(str):
+    str = str.lower()
+
+    return str == str[::-1]
+
+
+print(palindromCheck("dad"))
+
+
 # TASK M
 
 # Array ichidagi har bir raqam uchun raqamning o'zi va
