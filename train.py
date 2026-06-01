@@ -1,15 +1,25 @@
+# project Standarts:
+#  - Logging standarts:
+#  - Naming standarts:
+#     functiona, methods, variables => camelCase
+#     classes => PascalCase
+#     folders => kebab-case
+#     css => snake-case
+#  =Error handling standarts:
+
+
 # TASK N
 
 # Stringni palindrom ekanligini aniqlab true yoki false qaytarsin.
 
 # Masalan: palindromCheck("dad") return true
-def palindromCheck(str):
-    str = str.lower()
+# def palindromCheck(str):
+#     str = str.lower()
 
-    return str == str[::-1]
+#     return str == str[::-1]
 
 
-print(palindromCheck("dad"))
+# print(palindromCheck("dad"))
 
 
 # TASK M
