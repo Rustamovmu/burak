@@ -1,0 +1,8 @@
+$kind: http-request
+name: processSignup
+url: localhost:3003/admin/signup
+method: POST
+body:
+  type: json
+  content: ""
+order: 1553262690149776

@@ -1,0 +1,5 @@
+$kind: http-request
+name: getLogin
+url: localhost:3003/admin/login
+method: GET
+order: 420967082729524
