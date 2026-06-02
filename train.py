@@ -1,3 +1,19 @@
+# TASK O
+
+# Array ichidagi har xil qiymatlardan faqat sonlar yig'indisini hisoblab qaytarsin.
+
+# Masalan: calculateSumOfNumbers([10, "10", {son: 10}, true, 35]) return 45
+
+def calculate_sum_of_numbers(arr):
+    return sum(
+        item for item in arr
+        if isinstance(item, (int, float)) and not isinstance(item, bool)
+    )
+
+
+print(calculate_sum_of_numbers([10, "10", 11, {"son": 10}, True, 35]))  # 45
+
+
 # project Standarts:
 #  - Logging standarts:
 #  - Naming standarts:
