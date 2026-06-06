@@ -4,11 +4,11 @@
 
 # Masalan: objectToArray({a: 10, b: 20}) return [["a", 10], ["b", 20]]
 
-def objectToArray(obj):
-    return [[key, value] for key, value in obj.items()]
+# def objectToArray(obj):
+#     return [[key, value] for key, value in obj.items()]
 
 
-print(objectToArray({"a": 10, "b": 20}))
+# print(objectToArray({"a": 10, "b": 20}))
 
 # TASK O
 
