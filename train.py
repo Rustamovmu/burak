@@ -1,3 +1,18 @@
+# TASK Q
+
+# Objectda berilgan string propertysi borligini tekshirsin.
+
+# Masalan: hasProperty({name: "BMW"}, "name") return true.     in python
+
+def hasProperty(obj, p):
+    return p in obj
+
+
+# Test
+print(hasProperty({"name": "Porshe"}, "name"))
+print(hasProperty({"name": "BMW"}, "age"))
+
+
 # TASK P
 
 # Objectni nested array sifatida convert qilib qaytarsin.
