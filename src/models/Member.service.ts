@@ -57,10 +57,10 @@ class MemberService {
             throw new Errors(HttpCode.BAD_REQUEST, Message.CREATE_FAILED);
         }
 
-        console.log("before hashing password:", input.memberPassword);
+
         const salt = await bcrypt.genSalt(10);
         input.memberPassword = await bcrypt.hash(input.memberPassword, salt);
-        console.log("after hashing password:", input.memberPassword);
+
         try {
             const result = await this.memberModel.create(input);
             result.memberPassword = "";

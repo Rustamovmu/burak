@@ -6,11 +6,11 @@ import morgan from "morgan";
 import { MORGAN_FORMAT } from "./libs/config";
 
 import session from "express-session";
-import connectMongoDB from "connect-mongodb-session";
+import ConnectMongoDB from "connect-mongodb-session";
 
-const MongoDBStore = connectMongoDB(session);
+const MongoDBStore = ConnectMongoDB(session);
 const store = new MongoDBStore({
-    uri: String(process.env.MONGODB_URL),
+    uri: String(process.env.MONGO_URL),
     collection: "sessions"
 });
 
