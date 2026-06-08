@@ -1,16 +1,27 @@
+# TASK R
+
+# "1 + 2" ko'rinishidagi stringni hisoblab number qaytarsin.
+
+# Masalan: calculate("1 + 3") return 4
+def calculate(expression):
+    return eval(expression)
+
+
+print(calculate("4 - 3"))
+
 # TASK Q
 
 # Objectda berilgan string propertysi borligini tekshirsin.
 
 # Masalan: hasProperty({name: "BMW"}, "name") return true.     in python
 
-def hasProperty(obj, p):
-    return p in obj
+# def hasProperty(obj, p):
+#     return p in obj
 
 
-# Test
-print(hasProperty({"name": "Porshe"}, "name"))
-print(hasProperty({"name": "BMW"}, "age"))
+# # Test
+# print(hasProperty({"name": "Porshe"}, "name"))
+# print(hasProperty({"name": "BMW"}, "age"))
 
 
 # TASK P
