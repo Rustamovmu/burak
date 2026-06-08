@@ -3,8 +3,8 @@
 # "1 + 2" ko'rinishidagi stringni hisoblab number qaytarsin.
 
 # Masalan: calculate("1 + 3") return 4
-def calculate(expression):
-    return eval(expression)
+def calculate(srt):
+    return eval(srt)
 
 
 print(calculate("4 - 3"))
