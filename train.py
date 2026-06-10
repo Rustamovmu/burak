@@ -1,13 +1,28 @@
+# TASK S
+
+# Array ichidagi tushib qolgan sonni topib qaytarsin.
+
+# Masalan: missingNumber([3, 0, 1]) return 2
+def missingNumber(num):
+    n = len(num)
+    kutilgan_yigindi = n * (n + 1) // 2
+    yigindi = sum(num)
+    return kutilgan_yigindi - yigindi
+
+
+print(missingNumber([3, 0, 1]))
+
+
 # TASK R
 
 # "1 + 2" ko'rinishidagi stringni hisoblab number qaytarsin.
 
 # Masalan: calculate("1 + 3") return 4
-def calculate(srt):
-    return eval(srt)
+# def calculate(srt):
+#     return eval(srt)
 
 
-print(calculate("4 - 3"))
+# print(calculate("4 - 3"))
 
 # TASK Q
 
