@@ -1,0 +1,5 @@
+$kind: http-request
+name: product:getAllProduct
+url: localhost:3003/admin/product/all
+method: GET
+order: 4067613257566693

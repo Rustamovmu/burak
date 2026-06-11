@@ -1,15 +1,18 @@
 $kind: http-request
-name: processSignup
+name: member:processSignup
 url: localhost:3003/admin/signup?memberNick=Burak&memberPhone=821081282729&memberPassword=Muhammadumar2004
 method: POST
 queryParams:
-  memberNick: Burak
-  memberPhone: "821081282729"
-  memberPassword: Muhammadumar2004
+  - key: memberNick
+    value: Burak
+  - key: memberPhone
+    value: "821081282729"
+  - key: memberPassword
+    value: Muhammadumar2004
 body:
   type: urlencoded
   content:
     memberNick: Burak
-    memberPhone: "821081282727"
+    memberPhone: "821081282729"
     memberPassword: Muhammadumar2004
 order: 1553262690149776

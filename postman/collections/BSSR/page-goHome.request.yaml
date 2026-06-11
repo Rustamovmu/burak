@@ -1,5 +1,5 @@
 $kind: http-request
-name: goHome
+name: page:goHome
 url: localhost:3003/admin
 method: GET
 order: 1780280255231

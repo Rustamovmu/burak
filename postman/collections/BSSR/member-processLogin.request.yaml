@@ -1,12 +1,12 @@
 $kind: http-request
-name: login
-url: localhost:3003/login
+name: member:processLogin
+url: localhost:3003/admin/login
 method: POST
 body:
   type: json
   content: |-
     {
-        "memberNick": "Davit",
+        "memberNick": "Burak",
         "memberPassword": "Muhammadumar2004"
     }
-order: 1386858303420985
+order: 704603207508369

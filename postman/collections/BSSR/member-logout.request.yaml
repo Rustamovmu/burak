@@ -1,5 +1,5 @@
 $kind: http-request
-name: logout
+name: member:logout
 url: localhost:3003/admin/logout
 method: GET
 order: 1670833020817357

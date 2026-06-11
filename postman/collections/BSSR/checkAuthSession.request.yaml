@@ -1,4 +1,0 @@
-$kind: http-request
-url: localhost:3003/admin/chechk-me
-method: GET
-order: 3527336276339041

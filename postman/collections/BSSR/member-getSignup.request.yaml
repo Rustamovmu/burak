@@ -1,4 +1,5 @@
 $kind: http-request
+name: member:getSignup
 url: localhost:3003/admin/signup
 method: GET
 body:

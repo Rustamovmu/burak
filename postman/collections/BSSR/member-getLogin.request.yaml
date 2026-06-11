@@ -1,5 +1,5 @@
 $kind: http-request
-name: getLogin
+name: member:getLogin
 url: localhost:3003/admin/login
 method: GET
 order: 473423300412415
