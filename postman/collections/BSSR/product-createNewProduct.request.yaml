@@ -5,14 +5,47 @@ method: POST
 body:
   type: formdata
   content:
+    - type: text
+      key: productCollection
+      value: DISH
+      description: ""
+      disabled: false
+    - type: text
+      key: productName
+      value: Steak
+      description: ""
+      disabled: false
+    - type: text
+      key: productPrice
+      value: "15"
+      description: ""
+      disabled: false
+    - type: text
+      key: productLeftCount
+      value: "100"
+      description: ""
+      disabled: false
+    - type: text
+      key: productSize
+      value: NORMAL
+      description: ""
+      disabled: false
+    - type: text
+      key: productVolume
+      value: "1"
+      description: ""
+      disabled: true
+    - type: text
+      key: productDecs
+      value: Delicious meal
+      description: ""
+      disabled: false
     - type: file
       key: productImages
       src:
-        - /Users/a1234/Downloads/_.jpeg
-        - /Users/a1234/Downloads/IMG_1303.PNG
-        - /Users/a1234/Downloads/IMG_1304.PNG
-        - /Users/a1234/Downloads/IMG_1305.PNG
-        - /Users/a1234/Downloads/IMG_1306.PNG
+        - /Users/a1234/Downloads/_ (2).jpeg
+        - /Users/a1234/Downloads/_ (3).jpeg
+        - /Users/a1234/Downloads/Côte de bœuf grillée 🥩🔥.jpeg
       description: ""
       disabled: false
 order: 4431704487369516
