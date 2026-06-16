@@ -1,5 +1,18 @@
 $kind: http-request
 name: product:createNewProduct
-url: ""
-method: GET
+url: localhost:3003/admin/product/create
+method: POST
+body:
+  type: formdata
+  content:
+    - type: file
+      key: productImages
+      src:
+        - /Users/a1234/Downloads/_.jpeg
+        - /Users/a1234/Downloads/IMG_1303.PNG
+        - /Users/a1234/Downloads/IMG_1304.PNG
+        - /Users/a1234/Downloads/IMG_1305.PNG
+        - /Users/a1234/Downloads/IMG_1306.PNG
+      description: ""
+      disabled: false
 order: 4431704487369516

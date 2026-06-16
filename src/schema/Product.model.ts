@@ -37,14 +37,13 @@ const productShema = new Schema(
         },
 
         productVolume: {
-            type: String,
+            type: Number,
             enum: ProductVolume,
             default: ProductVolume.ONE,
         },
 
         productDesc: {
             type: String,
-            required: true,
         },
 
         productImages: {
@@ -53,7 +52,7 @@ const productShema = new Schema(
         },
 
         productViews: {
-            type: String,
+            type: Number,
             default: 0,
         },
     },
