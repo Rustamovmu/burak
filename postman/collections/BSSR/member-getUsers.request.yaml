@@ -1,0 +1,5 @@
+$kind: http-request
+name: member:getUsers
+url: localhost:3003/admin/logout
+method: GET
+order: 2642962295127914
