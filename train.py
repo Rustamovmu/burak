@@ -4,11 +4,11 @@
 
 # Masalan: mergeSortedArrays([0, 3, 4], [4, 6]) return [0, 3, 4, 4, 6]
 
-def mergeSortedArrays(a, b):
-    return sorted(a + b)
+# def mergeSortedArrays(a, b):
+#     return sorted(a + b)
 
 
-print(mergeSortedArrays([0, 3, 4], [4, 6]))
+# print(mergeSortedArrays([0, 3, 4], [4, 6]))
 
 
 # TASK S
