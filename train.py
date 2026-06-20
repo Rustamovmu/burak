@@ -1,3 +1,25 @@
+# TASK V
+
+# Stringdagi har bir harf necha marta takrorlanganini object sifatida qaytarsin.
+
+# Masalan: countChars("hello") return {h: 1, e: 1, l: 2, o: 1}
+
+def countChars(text):
+    result = {}
+
+    for letter in text:
+        if letter in result:
+            result[letter] += 1
+        else:
+            result[letter] = 1
+
+    return result
+
+print(countChars("hello"))
+
+
+
+
 # TASK T
 
 # Ikkita arrayni qabul qilib, ularni birlashtirib tartiblangan holda qaytarsin.
