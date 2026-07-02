@@ -1,18 +1,28 @@
+# TASK Z
+
+# Array tarkibidagi juft sonlar yig'indisini hisoblab qaytarsin.
+
+# Masalan: sumEvens([1, 2, 3]) return 2
+
+def sumEvens(arr):
+    return sum(num for num in arr if num % 2 == 0)    
+
+print(sumEvens([1, 2, 3, 4, 5, 6]))  
 # TASK Y
 
 # Ikkala arrayda ham ishtirok etgan bir xil qiymatlarni qaytarsin.
 
 # Masalan: findIntersection([1, 2, 3], [3, 2, 0]) return [2, 3]
 
-def findIntersection(arr1, arr2):
-    result = []
-    for num in arr1:
-        if num in arr2:
-            result.append(num)
+# def findIntersection(arr1, arr2):
+#     result = []
+#     for num in arr1:
+#         if num in arr2:
+#             result.append(num)
     
-    return result
+#     return result
 
-print(findIntersection([1, 2, 3], [3, 2, 0]))
+# print(findIntersection([1, 2, 3], [3, 2, 0]))
 # TASK X
 
 # Object tarkibida (nested bo'lsa ham) berilgan kalit necha marta takrorlanganini sanang.
