@@ -1,14 +1,14 @@
-# TASK Z
+# # TASK Z
 
-# Array tarkibidagi juft sonlar yig'indisini hisoblab qaytarsin.
+# # Array tarkibidagi juft sonlar yig'indisini hisoblab qaytarsin.
 
-# Masalan: sumEvens([1, 2, 3]) return 2
+# # Masalan: sumEvens([1, 2, 3]) return 2
 
-def sumEvens(arr):
-    return sum(num for num in arr if num % 2 == 0)    
+# def sumEvens(arr):
+#     return sum(num for num in arr if num % 2 == 0)    
 
-print(sumEvens([1, 2, 3, 4, 5, 6]))  
-# TASK Y
+# print(sumEvens([1, 2, 3, 4, 5, 6]))  
+# # TASK Y
 
 # Ikkala arrayda ham ishtirok etgan bir xil qiymatlarni qaytarsin.
 
