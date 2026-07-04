@@ -31,11 +31,11 @@ class MemberService {
     public async login(input: LoginInput): Promise<Member> {
         const member = await this.memberModel
             .findOne(
-                { 
-                    memberNick: input.memberNick, 
-                    memberStatus: { $ne: MemberStatus.DELETE}, 
+                {
+                    memberNick: input.memberNick,
+                    memberStatus: { $ne: MemberStatus.DELETE },
                 },
-                { memberNick: 1, memberPassword: 1, memberStatus: 1  })
+                { memberNick: 1, memberPassword: 1, memberStatus: 1 })
             .exec();
         if (!member) throw new Errors(HttpCode.NOT_FOUND, Message.NO_MEMBER_NICK);
         else if (member.memberStatus === MemberStatus.BLOCK) {
@@ -49,6 +49,14 @@ class MemberService {
 
         return await this.memberModel.findById(member._id).lean().exec();
 
+    }
+
+    public async getMemberDetail(member: Member): Promise<Member> {
+        const memberId = shapeIntoMongooseObjectid(member._id);
+        const result = await this.memberModel.findOne({ _id: memberId, memberStatus: MemberStatus.ACTIVE })
+        .exec();
+        if (!result) throw new Errors(HttpCode.NOT_FOUND, Message.NO_DATA_FOUND);
+        return result;
     }
 
     //  SSR 
@@ -100,18 +108,18 @@ class MemberService {
     public async getUsers(): Promise<Member[]> {
         const result = await this.memberModel.find({ memberType: MemberType.USER }).exec();
 
-        if(!result) throw new Errors(HttpCode.NOT_FOUND, Message.NO_DATA_FOUND);
+        if (!result) throw new Errors(HttpCode.NOT_FOUND, Message.NO_DATA_FOUND);
 
         return result;
     }
 
-    public async updateChosenUser( input: MemberUpdateInput): Promise<Member> {
-        input._id = shapeIntoMongooseObjectid( input._id);
+    public async updateChosenUser(input: MemberUpdateInput): Promise<Member> {
+        input._id = shapeIntoMongooseObjectid(input._id);
         const result = await this.memberModel
-        .findByIdAndUpdate({ _id: input._id }, input, { new: true})
-        .exec();
+            .findByIdAndUpdate({ _id: input._id }, input, { new: true })
+            .exec();
 
-        if(!result) throw new Errors(HttpCode.NOT_MODIFIED, Message.NO_DATA_FOUND);
+        if (!result) throw new Errors(HttpCode.NOT_MODIFIED, Message.NO_DATA_FOUND);
 
         return result;
     }
