@@ -1,12 +1,8 @@
 $kind: http-request
 name: member:verifyAuth
-url: localhost:3003/member/login
-method: POST
+url: localhost:3003/member/detail
+method: GET
 body:
   type: json
-  content: |-
-    {
-        "memberNick": "Davit",
-        "memberPassword": "Muhammadumar2004"
-    }
+  content: ""
 order: 1776346087412090
