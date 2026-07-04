@@ -1,6 +1,6 @@
 $kind: http-request
-name: login
-url: localhost:3003/login
+name: member:verifyAuth
+url: localhost:3003/member/login
 method: POST
 body:
   type: json
@@ -9,4 +9,4 @@ body:
         "memberNick": "Davit",
         "memberPassword": "Muhammadumar2004"
     }
-order: 1386858303420985
+order: 1776346087412090

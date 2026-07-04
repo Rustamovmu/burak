@@ -1,0 +1,13 @@
+$kind: http-request
+name: member:signup
+url: localhost:3003/member/signup
+method: POST
+body:
+  type: json
+  content: |-
+    {
+        "memberNick": "Epstain",
+        "memberPhone": "82112228888",
+        "memberPassword": "Muhammadumar2004"
+    }
+order: 1780724745462

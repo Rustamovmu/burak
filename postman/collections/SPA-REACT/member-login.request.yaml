@@ -1,13 +1,12 @@
 $kind: http-request
-name: signup
-url: localhost:3003/signup
+name: member:login
+url: localhost:3003/member/login
 method: POST
 body:
   type: json
   content: |-
     {
         "memberNick": "Davit",
-        "memberPhone": "8211222729",
         "memberPassword": "Muhammadumar2004"
     }
-order: 1780724745462
+order: 1386858303420985
