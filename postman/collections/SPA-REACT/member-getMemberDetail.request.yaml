@@ -1,5 +1,5 @@
 $kind: http-request
-name: member:verifyAuth
+name: member:getMemberDetail
 url: localhost:3003/member/detail
 method: GET
 body:

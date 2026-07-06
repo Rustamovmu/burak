@@ -1,0 +1,34 @@
+$kind: http-request
+name: member:updateMember
+url: localhost:3003/member/update
+method: POST
+body:
+  type: formdata
+  content:
+    - type: text
+      key: memberNick
+      value: David
+      description: ""
+      disabled: true
+    - type: text
+      key: memberPhone
+      value: ""
+      description: ""
+      disabled: true
+    - type: text
+      key: memberAddress
+      value: ""
+      description: ""
+      disabled: true
+    - type: text
+      key: memberDesc
+      value: Im the one that you've been looking for!
+      description: ""
+      disabled: false
+    - type: file
+      key: memberImage
+      src:
+        - /Users/a1234/Downloads/Profile.png
+      description: ""
+      disabled: false
+order: 1753575013363795
