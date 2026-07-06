@@ -1,0 +1,8 @@
+$kind: http-request
+name: member:getRestaurant
+url: localhost:3003/member/restaurant
+method: GET
+body:
+  type: json
+  content: ""
+order: 4378282955098363
