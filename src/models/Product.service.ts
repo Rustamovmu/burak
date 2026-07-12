@@ -5,12 +5,17 @@ import { T } from "../libs/types/common";
 import { Product, ProductInput, ProductInquiry, ProductUpdateInput } from "../libs/types/product";
 import ProductModel from "../schema/Product.model";
 import { ObjectId } from "mongoose";
+import ViewService from "./View.service";
+import { ViewInput } from "../libs/types/view";
+import { ViewGroup } from "../libs/enums/view.enum";
 
 class ProductService {
     private readonly productModel;
+    public viewService;
 
     constructor() {
         this.productModel = ProductModel;
+        this.viewService = new ViewService;
     }
 
     /** SPA */
@@ -34,6 +39,8 @@ class ProductService {
         ]).exec()
 
         if (!result) throw new Errors(HttpCode.NOT_FOUND, Message.NO_DATA_FOUND)
+        
+
 
         return result;
     }
@@ -51,6 +58,33 @@ class ProductService {
         }).exec();
 
         if (!result) throw new Errors(HttpCode.NOT_FOUND, Message.NO_DATA_FOUND)
+        
+        if (memberId) {
+            //if authenticated and at the first time ==> view add
+            // Check Exist the same meber
+            const input: ViewInput = {
+                memberId: memberId,
+                viewRefId: productId,
+                viewGroup: ViewGroup.PRODUCT
+            }
+            const existView = await this.viewService.checkViewExistence(input)
+
+
+            console.log("exist", !!existView)
+
+            if (!existView) {
+                // Insert View
+                console.log("Plannning insert");
+                await this.viewService.insertMemberView(input);
+
+                const result = await this.productModel
+                    .findByIdAndUpdate(productId, { $inc: { productViews: +1 } }, { new: true })
+                    .exec();
+            }
+
+
+            // Increase view
+        }
 
         return result;
     }
