@@ -1,0 +1,21 @@
+$kind: http-request
+name: "order: createOrder"
+description: ""
+url: localhost:3003/order/create
+method: POST
+body:
+  type: json
+  content: |-
+    [
+        {
+            "productId": "6a3a28b3640fa3d4ba633f3a",
+            "itemPrice": 15,
+            "itemQuantity": 2
+        },
+        {
+            "productId": "6a3a2d17640fa3d4ba633f41",
+            "itemPrice": 3,
+            "itemQuantity": 2
+        }
+    ]
+order: 4399195178133872

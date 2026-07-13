@@ -1,7 +1,13 @@
 $kind: http-request
 name: product:getProducts
-url: localhost:3003/product/all
+url: localhost:3003/product/all?order=createdAt&page=1&limit=3&productCollection=DISH&search=Steak
 method: GET
+queryParams:
+  order: createdAt
+  page: "1"
+  limit: "3"
+  productCollection: DISH
+  search: Steak
 body:
   type: json
   content: ""

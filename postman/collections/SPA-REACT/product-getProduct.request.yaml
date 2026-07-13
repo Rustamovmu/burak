@@ -1,6 +1,6 @@
 $kind: http-request
 name: product:getProduct
-url: localhost:3003/product/6a3a28b3640fa3d4ba633f3a
+url: localhost:3003/product/6a3a2906640fa3d4ba633f3d
 method: GET
 body:
   type: json

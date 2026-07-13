@@ -12,7 +12,7 @@ body:
       disabled: false
     - type: text
       key: productName
-      value: Steak
+      value: Qovurma
       description: ""
       disabled: false
     - type: text
@@ -27,7 +27,7 @@ body:
       disabled: false
     - type: text
       key: productSize
-      value: NORMAL
+      value: LARGE
       description: ""
       disabled: false
     - type: text
