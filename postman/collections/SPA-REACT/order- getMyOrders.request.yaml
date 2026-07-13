@@ -1,0 +1,8 @@
+$kind: http-request
+name: "order: getMyOrders"
+url: localhost:3003/product/6a3a2906640fa3d4ba633f3d
+method: GET
+body:
+  type: json
+  content: ""
+order: 4390036468518122
