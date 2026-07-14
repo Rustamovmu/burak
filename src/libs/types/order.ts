@@ -4,6 +4,7 @@ import { Product } from "./product";
 
 
 export interface OrderItemInput {
+    orderStatus: any;
     itemQuantity: number;
     itemPrice: number;
     productId: ObjectId;
@@ -38,4 +39,9 @@ export interface OrderInquiry {
     page: number;
     limit: number;
     orderStatus: OrderStatus;
+}
+
+export interface OrderUpdateInput {
+    orderId: string,
+    orderStatus: OrderStatus
 }
