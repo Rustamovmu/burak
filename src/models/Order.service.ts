@@ -104,37 +104,29 @@ class OrderService {
     }
 
 
-  
-    public async updateOrder(member: Member, input: OrderUpdateInput): Promise<Order> {
+  public async updateOrder(
+    member: Member,
+    input: OrderUpdateInput,
+  ): Promise<Order> {
+    const memberId = shapeIntoMongooseObjectid(member._id),
+      orderId = shapeIntoMongooseObjectid(input.orderId),
+      orderStatus = input.orderStatus;
 
-        const memberId = shapeIntoMongooseObjectid(member._id);
-        const orderId = shapeIntoMongooseObjectid(input.orderId);
-        const orderStatus = input.orderStatus;
+    const result = await this.orderModel
+      .findOneAndUpdate(
+        { memberId: memberId },
+        { orderStatus: orderStatus },
+        { new: true },
+      )
+      .exec();
 
-        const filter: Record<string, unknown> = { memberId: memberId, _id: orderId };
-
-        // Only a paused order can enter processing, so points cannot be awarded twice.
-        if (orderStatus === OrderStatus.PROCESS) {
-            filter.orderStatus = OrderStatus.PAUSE;
-        }
-
-        const result = await this.orderModel
-            .findOneAndUpdate(
-                filter,
-                { orderStatus: orderStatus },
-                { new: true })
-            .exec()
-
-        if (!result) throw new Errors(HttpCode.NOT_MODIFIED, Message.UPDATE_FAILED);
-
-        //OrderStatus from PAUSE to PROCESS +1 increase
-
-        if (orderStatus === OrderStatus.PROCESS) {
-            await this.memberService.addUserPoint(member, 1)
-        }
-
-        return result
+    if (!result) throw new Errors(HttpCode.NOT_MODIFIED, Message.UPDATE_FAILED);
+    if (orderStatus === OrderStatus.PROCESS) {
+      await this.memberService.addUserPoint(member, 1);
     }
+
+    return result;
+  }
 }
 
 export default OrderService;
